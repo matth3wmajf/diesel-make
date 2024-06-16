@@ -39,10 +39,12 @@ int main(int argc, const char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	int l_character;
-	while((l_character = fgetc(g_makefile_file)) != EOF)
+	int l_full_character;
+	while((l_full_character = fgetc(g_makefile_file)) != EOF)
 	{
-		/* TODO: Parse the file's contents. */
+		char l_character = (char)l_full_character;
+
+		putchar(l_character);
 	}
 	
 	fclose(g_makefile_file);
